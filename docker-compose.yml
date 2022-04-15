@@ -3,6 +3,15 @@ version: "3.7"
 x-service-volumes: &service-volumes
   - ./:/app/:rw,cached
 
+x-database-variables: &database-variables 
+  POSTGRES_DB: postgres
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgres 
+
+x-app-variables: &app-variables
+  <<: *database-variables
+  POSTGRES_HOST: postgres
+
 services:
   website:
     image: kawage:latest
@@ -17,5 +26,15 @@ services:
     image: kawage:latest
     command: python manage.py migrate
     volumes: *service-volumes
+    environment: *app-variables
 
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment: *database-variables
+    volumes:
+      - db-data:/var/lib/postgresql/data
   
+volumes:
+  db-data:
