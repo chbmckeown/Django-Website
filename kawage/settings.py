@@ -76,15 +76,15 @@ WSGI_APPLICATION = "kawage.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-POSTGRES_HOST = os.environ.get('POSTGRES_HOST', default="")
-POSTGRES_DB = os.environ.get('POSTGRES_DB', default="")
-POSTGRES_USER = os.environ.get('POSTGRES_USER', default="")
-POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', default="")
+POSTGRES_HOST = os.environ.get('POSTGRES_HOST', default="postgres")
+POSTGRES_DB = os.environ.get('POSTGRES_DB', default="postgres")
+POSTGRES_USER = os.environ.get('POSTGRES_USER', default="postgres")
+POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', default="postgres")
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': POSTGRES_HOST,
+        'NAME': POSTGRES_DB,
         'USER': POSTGRES_USER,
         'PASSWORD': POSTGRES_PASSWORD,
         'HOST': POSTGRES_HOST,

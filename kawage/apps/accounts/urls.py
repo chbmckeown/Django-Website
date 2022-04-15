@@ -9,7 +9,7 @@ urlpatterns = [
     path("accounts/profile", views.ProfileView.as_view(), name="profile"),
     # django auth
     path(
-        "accounts/login",
+        "login",
         auth_views.LoginView.as_view(template_name="accounts/login.html"),
         name="login",
     ),
