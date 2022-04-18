@@ -23,3 +23,22 @@
 .bbb-bg-primary {
     background-color: #FF5733;
 }
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .2s, color .2s;
+
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color:#FF5733;
+    border-color: #FF5733;
+
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:active {
+    background: none;
+    color: white;
+    border-color: #FF5733;
+
+}
