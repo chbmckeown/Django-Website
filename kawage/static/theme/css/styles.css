@@ -11385,11 +11385,11 @@ html {
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.1rem;
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
   #mainNav .navbar-brand {
-    font-size: 1.75em;
+    font-size: 2.25em;
     transition: font-size 0.3s;
   }
   #mainNav .navbar-nav {

@@ -7,3 +7,19 @@
       padding-top: calc(104px);
     }
 }
+
+@font-face {
+    font-family: "kawage font";
+    src: 
+    url("fonts/RoboSapienExpanded-d9GvZ.otf") format("opentype");
+}
+
+.navbar-brand {
+    font-family: "kawage font";
+    text-transform: lowercase;
+    font-size: 3em;
+}
+
+.bbb-bg-primary {
+    background-color: #FF5733;
+}
