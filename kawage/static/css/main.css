@@ -42,3 +42,10 @@
     border-color: #FF5733;
 
 }
+
+.masthead {
+    background-image: url("../theme/assets/img/portfolio/billy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

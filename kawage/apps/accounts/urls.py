@@ -6,10 +6,10 @@ from . import views
 
 app_name = "accounts"
 urlpatterns = [
-    path("accounts/profile", views.ProfileView.as_view(), name="profile"),
+    path("accountsprofile", views.ProfileView.as_view(), name="profile"),
     # django auth
     path(
-        "login",
+        "laccounts/ogin",
         auth_views.LoginView.as_view(template_name="accounts/login.html"),
         name="login",
     ),

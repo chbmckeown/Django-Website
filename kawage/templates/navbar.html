@@ -1,6 +1,9 @@
 {% url 'public:index' as index_url %}
 {% url 'public:about' as about_url %}
 {% url 'public:contact' as contact_url %}
+{% url 'accounts:login' as login_url %}
+{% url 'accounts:profile' as profile_url %}
+
 
 
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -16,6 +19,8 @@
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 {% if request.path == index_url %}active{% endif %}" href="{{ index_url }}">Home</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 {% if request.path == profile_url %}active{% endif %}" href="{{ profile_url }}">Profile</a></li>
             </ul>
         </div>
     </div>
